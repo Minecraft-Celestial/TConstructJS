@@ -19,6 +19,6 @@ public interface MeltingRecipe {
     RecipeKey<OutputFluid> FLUID_RESULT = FluidComponents.OUTPUT.key("result");
 
     RecipeSchema MELTING = new RecipeSchema(FLUID_RESULT, INPUT, TEMPERATURE, TIME);
-    RecipeSchema MELTING_FUEL = new RecipeSchema(DURATION, FLUID, TEMPERATURE);
+    RecipeSchema MELTING_FUEL = new RecipeSchema(FLUID, TEMPERATURE, DURATION);
 
 }

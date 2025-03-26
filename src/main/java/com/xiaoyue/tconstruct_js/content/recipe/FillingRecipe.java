@@ -11,7 +11,7 @@ public interface FillingRecipe {
     RecipeKey<Integer> FLUID_AMOUNT = NumberComponent.INT.key("fluid_amount").optional(100);
     RecipeKey<InputItem> CONTAINER = ItemComponents.INPUT.key("container");
 
-    RecipeSchema TABLE_FILLING = new RecipeSchema(FLUID_AMOUNT, CONTAINER);
-    RecipeSchema BASIN_FILLING = new RecipeSchema(FLUID_AMOUNT, CONTAINER);
+    RecipeSchema TABLE_FILLING = new RecipeSchema(CONTAINER, FLUID_AMOUNT);
+    RecipeSchema BASIN_FILLING = new RecipeSchema(CONTAINER, FLUID_AMOUNT);
 
 }

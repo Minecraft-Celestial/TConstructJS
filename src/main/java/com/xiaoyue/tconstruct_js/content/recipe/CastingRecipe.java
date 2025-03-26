@@ -20,8 +20,8 @@ public interface CastingRecipe {
     RecipeKey<InputItem> BOTTLE = ItemComponents.INPUT.key("bottle");
     RecipeKey<OutputItem> RESULT = ItemComponents.OUTPUT.key("result");
 
-    RecipeSchema CASTING_TABLE = new RecipeSchema(RESULT, FLUID, CAST, CAST_CONSUME, COOLING_TIME, SWITCH_SLOTS);
-    RecipeSchema CASTING_BASIN = new RecipeSchema(RESULT, FLUID, CAST, CAST_CONSUME, COOLING_TIME, SWITCH_SLOTS);
+    RecipeSchema CASTING_TABLE = new RecipeSchema(RESULT, FLUID, COOLING_TIME, CAST, CAST_CONSUME, SWITCH_SLOTS);
+    RecipeSchema CASTING_BASIN = new RecipeSchema(RESULT, FLUID, COOLING_TIME, CAST, CAST_CONSUME, SWITCH_SLOTS);
     RecipeSchema CASTING_TABLE_POTION = new RecipeSchema(RESULT, BOTTLE, FLUID, COOLING_TIME);
     RecipeSchema CASTING_BASIN_POTION = new RecipeSchema(RESULT, BOTTLE, FLUID, COOLING_TIME);
 
