@@ -15,7 +15,7 @@ public interface CastingRecipe {
     RecipeKey<InputFluid> FLUID = FluidComponents.INPUT.key("fluid");
     RecipeKey<Boolean> CAST_CONSUME = BooleanComponent.BOOLEAN.key("cast_consumed").optional(false);
     RecipeKey<Boolean> SWITCH_SLOTS = BooleanComponent.BOOLEAN.key("switch_slots").optional(false);
-    RecipeKey<Integer> COOLING_TIME = NumberComponent.INT.key("cooling_time");
+    RecipeKey<Integer> COOLING_TIME = NumberComponent.INT.key("cooling_time").optional(100);
     RecipeKey<InputItem> CAST = ItemComponents.INPUT.key("cast").optional(InputItem.EMPTY);
     RecipeKey<InputItem> BOTTLE = ItemComponents.INPUT.key("bottle");
     RecipeKey<OutputItem> RESULT = ItemComponents.OUTPUT.key("result");
