@@ -9,9 +9,8 @@ import dev.latvian.mods.kubejs.recipe.component.NumberComponent;
 import dev.latvian.mods.kubejs.recipe.schema.RecipeSchema;
 
 public interface DuplicationRecipe {
-
-    RecipeKey<InputItem> CAST = ItemComponents.INPUT.key("cast");
-    RecipeKey<InputFluid> FLUID = FluidComponents.INPUT.key("fluid");
+    RecipeKey<InputItem> CAST = ItemComponents.INPUT.key("cast").optional(InputItem.EMPTY);
+    RecipeKey<InputFluid> FLUID = FluidComponents.INPUT.key("fluid").defaultOptional();
     RecipeKey<Double> COOLING_TIME = NumberComponent.DOUBLE.key("cooling_time").optional(1.0);
 
     RecipeSchema TABLE_DUPLICATION = new RecipeSchema(CAST, FLUID, COOLING_TIME);
