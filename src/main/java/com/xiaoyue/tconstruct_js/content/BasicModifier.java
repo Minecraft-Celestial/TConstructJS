@@ -119,9 +119,9 @@ public class BasicModifier extends Modifier implements VolatileDataModifierHook,
     }
 
     @Override
-    public float modifyStat(IToolStackView tool, ModifierEntry modifier, LivingEntity entity, FloatToolStat stat, float multiple, float baseValue) {
+    public float modifyStat(IToolStackView tool, ModifierEntry modifier, LivingEntity entity, FloatToolStat stat, float baseValue, float multiplier) {
         if (this.builder.conditionalStat != null) {
-            return this.builder.conditionalStat.modifyStat(tool, modifier.getLevel(), entity, stat, multiple, baseValue);
+            return this.builder.conditionalStat.modifyStat(tool, modifier.getLevel(), entity, stat, baseValue, multiplier);
         }
         return baseValue;
     }

@@ -329,7 +329,7 @@ public class ModifierBuilder {
 
     @FunctionalInterface
     public interface ConditionalStatFunction {
-        float modifyStat(IToolStackView tool, int level, LivingEntity entity, FloatToolStat stat, float multiple, float baseValue);
+        float modifyStat(IToolStackView tool, int level, LivingEntity entity, FloatToolStat stat, float baseValue, float multiplier);
     }
 
     @FunctionalInterface
