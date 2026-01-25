@@ -15,9 +15,7 @@ ServerEvents.recipes((event) => {
   tconstruct.basin_filling(1000, "apple");
 
   // tconstruct:casting_basin
-  tconstruct.casting_basin("diamond", Fluid.of("tconstruct:molten_diamond", 1000), "apple");
-  tconstruct.casting_basin("diamond", Fluid.of("tconstruct:molten_diamond", 1000), "apple", true);
-  tconstruct.casting_basin("diamond", Fluid.of("tconstruct:molten_diamond", 1000), "apple").cast_consumed(true);
+  tconstruct.casting_basin("raw_gold", Fluid.of("tconstruct:molten_glass", 200)).cooling_time(200);
   tconstruct.casting_basin("diamond", Fluid.of("tconstruct:molten_diamond", 1000), "apple", true, 200);
   tconstruct
     .casting_basin("diamond", Fluid.of("tconstruct:molten_diamond", 1000), "apple")
@@ -36,9 +34,6 @@ ServerEvents.recipes((event) => {
   tconstruct.casting_basin_potion("diamond", "apple", Fluid.of("tconstruct:molten_diamond", 1000)).cooling_time(400);
 
   // tconstruct:casting_table
-  tconstruct.casting_table("diamond", Fluid.of("tconstruct:molten_diamond", 1000), "apple");
-  tconstruct.casting_table("diamond", Fluid.of("tconstruct:molten_diamond", 1000), "apple", true);
-  tconstruct.casting_table("diamond", Fluid.of("tconstruct:molten_diamond", 1000), "apple").cast_consumed(true);
   tconstruct.casting_table("diamond", Fluid.of("tconstruct:molten_diamond", 1000), "apple", true, 200);
   tconstruct
     .casting_table("diamond", Fluid.of("tconstruct:molten_diamond", 1000), "apple")
@@ -64,9 +59,8 @@ ServerEvents.recipes((event) => {
   tconstruct.melting(Fluid.of("tconstruct:molten_diamond", 1000), "diamond").temperature(400).time(200);
 
   // tconstruct:melting_fuel
-  tconstruct.melting_fuel(1000, Fluid.of("milk", 1000));
-  tconstruct.melting_fuel(1000, Fluid.of("milk", 1000), 2000);
-  tconstruct.melting_fuel(1000, Fluid.of("milk", 1000)).temperature(4000);
+  tconstruct.melting_fuel(1000, Fluid.of("milk", 1000), 20, 2000);
+  tconstruct.melting_fuel(1000, Fluid.of("milk", 1000)).temperature(4000).rate(20);
 
   // tconstruct:molding_basin
   tconstruct.molding_table("diamond", "apple", "stick");

@@ -123,12 +123,11 @@ dependencies {
     implementation fg.deobf("dev.latvian.mods:kubejs-forge:${kubejs_version}")
     implementation fg.deobf("dev.latvian.mods:rhino-forge:${rhino_version}")
     implementation fg.deobf("dev.architectury:architectury-forge:${architectury_version}")
+    implementation fg.deobf("mezz.jei:jei-${jei_minecraft_version}:${jei_version}")
 
     runtimeOnly fg.deobf("curse.maven:attributefix-280510:4588114")
     runtimeOnly fg.deobf("curse.maven:bookshelf-228525:4581675")
     runtimeOnly fg.deobf("curse.maven:enchantment-descriptions-250419:4587429")
-    runtimeOnly fg.deobf("curse.maven:caelus-308989:4581481")
-    runtimeOnly fg.deobf("curse.maven:elytra-slot-317716:4598379")
 
 }
 

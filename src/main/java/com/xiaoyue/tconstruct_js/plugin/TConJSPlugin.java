@@ -7,6 +7,7 @@ import dev.latvian.mods.kubejs.KubeJSPlugin;
 import dev.latvian.mods.kubejs.recipe.schema.RegisterRecipeSchemasEvent;
 import dev.latvian.mods.kubejs.script.BindingsEvent;
 import slimeknights.tconstruct.TConstruct;
+import slimeknights.tconstruct.library.tools.SlotType;
 import slimeknights.tconstruct.library.tools.helper.ToolDamageUtil;
 import slimeknights.tconstruct.library.tools.stat.ToolStats;
 
@@ -40,5 +41,6 @@ public class TConJSPlugin extends KubeJSPlugin {
         event.add("SimpleTCon", SimpleTCon.class);
         event.add("TinkerToolStats", ToolStats.class);
         event.add("TinkerDamageHelper", ToolDamageUtil.class);
+        event.add("TinkerSlotType", SlotType.class);
     }
 }
